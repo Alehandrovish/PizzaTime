@@ -7,16 +7,20 @@
     src:url(./src/fonts/OrelegaOne-Regular.ttf);
 }
 
-body
+.body
 {
     font-family: olegeraOne;
     background: linear-gradient(0deg, #FFA34F 81.58%, rgba(223, 255, 255, 0) 100%);
     min-height: 100vh;
+    height: 100%;
     padding: 0;
     margin: 0;
     border: 0;
 }
-
+body a:hover, a:visited, a:link, a:active { 
+    text-decoration: none; 
+    color: #000;
+}
 
 header {position: relative; 
         font-family: casmira; 
@@ -34,34 +38,98 @@ img.icon {position: absolute;
         left: 54px;
     }
 
+.navigation-container{
+    position: sticky;
+    top: 0;
+}
 .navigation {
     margin-top: 50px;
     line-height: 400%;
+    position: sticky;
 }
 
 .navigation__list{
     display: flex;
     justify-content: space-between;
-    padding: 25px 25px;
+    background-color: #F4D19C;
+    border-radius: 59px;
+   
 
 }
+.navigation__left span{
+    margin: 20px 48px;
+    position: sticky;
+    }
+    .navigation__left a{
+        margin: 20px 48px;
+        position: sticky;
+        }
+.navigation__right{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+.navigation__right span{
+    margin: 0px 48px;
+    display: flex;
+    align-items: flex-start;
+    }
 .navigation__item{
     text-decoration: none;
     font-size: 40px;
     color: #000;
     white-space: nowrap;
+    cursor: pointer;
+    transition: 0.3s ease 0.3s;
 }
-.navigation__left a{
-margin: 20px 48px;
+.about__us{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.about{
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    justify-content: flex-end;
+    transition: all 0.3s linear;
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.about._active{
+    opacity: 1;
+    visibility: visible;
+}
+.about__block{
+    display: flex;
+    max-width: 300px;
+    background-color: #F4D19C;
+    border-radius: 59px;
+    justify-content: flex-end;
+    align-items: baseline;
+    
+}
+.about__img__block{
+    display: flex;
+}
+.about__img {
+    width: 60px;
+    height: 60px;
+    margin: 0 15px;
 }
 
-.navigation__right a{
-    margin: 0px 48px;
-}
 @media (max-width:1342px){
     .navigation__item{
         margin: 100px 48px; 
     }
+}
+
+h1{
+    font-size: 60px;
+    text-align: center;
 }
 h2{
     font-size: 50px;
@@ -70,11 +138,7 @@ h2{
     
 }
 
-.navigation__right{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-}
+
 .container{
     max-width: 1300px;
     margin: 0px auto;
@@ -152,6 +216,7 @@ transition-duration: 0.4s;
     padding: 0;
     align-items: center;
     justify-content: center;
+    min-width: 250px;
 }
 .block-drink__img{
     width: auto;
@@ -163,6 +228,14 @@ transition-duration: 0.4s;
     text-align: center;
     font-size: 40px;
     font-weight: bold;
+}
+.block-drink__price{
+    font-size: 40px;
+    font-weight: bold;
+    background-color: #FFA34F;
+    border-radius: 59px;
+    align-self: center;
+    gap: 15px;
 }
 .under__block{
 height: 58px;
@@ -244,11 +317,18 @@ img.image-footer{
 }
 @media (max-width:1309px){
     .body{
-        font-size: 30px;
+        font-size: 20px;
     }
     .navigation__item{
-        font-size: 50px;
-        line-height: 350%;
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+    .about__block{
+        max-width: 400px;
+    }
+    .about__img{
+        width: 90px;
+        height: 90px;
     }
     .container{
         max-width: 100%;
@@ -285,12 +365,52 @@ img.image-footer{
         width: auto;
         text-align: center;
     }
+    .block:hover{
+        border: solid #000 15px;
+        transform: scale(1.1);
+        transition-duration: 0.2s; 
+    }
+}
+@media (max-width: 1201px)
+{
+    .navigation__list{
+        justify-content: space-between;
+    }
+    .navigation__left{
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+    .about__us{
+        justify-content: flex-start;
+    }
+    .navigation__item{
+        font-size: 40px;
+    }
+    .block-drink__img{
+        width: 150px;
+        height: 150px;
+    }
+}
+@media (max-width:1081px) {
+    .navigation__left{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
 }
 .block:hover{
     border: solid #000;
      transform: scale(1.1);
      transition-duration: 0.2s;
 }
+.block-drink:hover{
+     transform: scale(1.1);
+     transition-duration: 0.2s;
+}
 .under__block:hover{
     border: solid #000;
+}
+.navigation__item:hover{
+    color: rgb(223, 120, 120);
+
 }

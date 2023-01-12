@@ -6,7 +6,7 @@
         <link rel="apple-touch-icon" sizes="180x180" href="src/icons/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="src/icons/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="src/icons/favicon-16x16.png">
-        <link rel="manifest" href="src/icons/site.webmanifest">
+        
         <link rel="mask-icon" href="src/icons/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
@@ -14,45 +14,57 @@
         <link rel="stylesheet" href="index.css" type="text/css">
     </head>
     
-    <body>
+    <body class="body">
         <div class="header">
-        
             <header>PizzaTime
-            <img class="icon" src="./src/pictures/pizzaicon.png">
-        </header>
-        
-        <div>
-            <nav class="navigation">
-                <ul class="navigation__list">
-                    <div class="navigation__left">
-                        <a class="navigation__item" href="#">Піци</a>
-                        <a class="navigation__item" href="#">Бургери</a>
-                        <a class="navigation__item" href="#">Піти</a>
-                        <a class="navigation__item" href="#">Напої</a>
-                    </div>
-                <div class="navigation__right">
-                    <a class="navigation__item" href="#">Про нас</a>
-                    <a class="navigation__item" href="#">Кошик</a>
-                </div>
-            </ul>
-            </nav>
+                <img class="icon" src="./src/pictures/pizzaicon.png">
+            </header>
         </div>
+    <div class="navigation-container">
+        <nav class="navigation">
+            <ul class="navigation__list">
+                <div class="navigation__left">
+                    <span class="navigation__item" >Піци</span>
+                    <span class="navigation__item" >Бургери</span>
+                    <span class="navigation__item" >Піти</span>
+                    <span class="navigation__item" >Напої</span>
+                </div>
+            <div class="navigation__right">
+                <div class="about__us">
+                    <span class="navigation__item onas" href="#">Про нас</span>
+                    <div class="about">
+                        <div class="about__block">
+                            <div class="about__img__block">
+                            <a href="https://www.instagram.com">
+                                <img class="about__img" src="./src/pictures/socialMediaIcon/instagram.png" alt="">
+                            </a>
+                            <a href="https://www.facebook.com/">
+                                <img class="about__img" src="./src/pictures/socialMediaIcon/facebook.png" alt="">
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <span class="navigation__item" href="#">Кошик</span>
+            </div>
+        </ul>
+        </nav>
+        
     </div>
-    
     <!Піци>
-    <div class="container">
+    <div id="pizza" class="container">
         <h2>Піци</h2>
         <div class="block__list">
             
             <div class="block">
 
                 <div class="block__img">
-                    <img src="./src/pictures/pizza/margarita.jpg">
+                    <img src="./src/pictures/pizza/4season.jpg">
                 </div>
                 <div class="block__without-img">
-                    <div class="block__title">Маргарита</div>
-                    <p class="block__text">Начинка – томаты и сыр. Обычно томаты нарезаны кружочками, сверху всё обильно присыпается зеленью типа орегано или базилика.</p>
-                    <a href="" class="block__price">109 грн</a>
+                    <div class="block__title">Чотири сезони</div>
+                    <p class="block__text">Інгредієнти першої частини – гриби, другий – м'ясна начинка, третьої – овочі типу томатів та перцю, четвертої – оливки та каперси. Зверху додають сир.</p>
+                    <a href="" class="block__price">214 грн</a>
                 </div>
 
             </div>
@@ -60,12 +72,12 @@
             <div class="block">
                 
                 <div class="block__img">
-                    <img src="./src/pictures/pizza/margarita.jpg">
+                    <img src="./src/pictures/pizza/gavai.jpg">
                 </div>
                 <div class="block__without-img">
-                    <div class="block__title">Маргарита</div>
-                    <p class="block__text">Начинка – томаты и сыр. Обычно томаты нарезаны кружочками, сверху всё обильно присыпается зеленью типа орегано или базилика.</p>
-                    <a href="" class="block__price">109 грн</a>
+                    <div class="block__title">Гавайська</div>
+                    <p class="block__text">В основі томатный соус. Начинка – ананаси, курка та сир моцарелла.</p>
+                    <a href="" class="block__price">195 грн</a>
                 </div>
             
             </div>
@@ -76,12 +88,12 @@
             <div class="block">
 
                 <div class="block__img">
-                    <img src="./src/pictures/pizza/margarita.jpg">
+                    <img src="./src/pictures/pizza/four_sheese.jpg">
                 </div>
                 <div class="block__without-img">
-                    <div class="block__title">Маргарита</div>
-                    <p class="block__text">Начинка – томаты и сыр. Обычно томаты нарезаны кружочками, сверху всё обильно присыпается зеленью типа орегано или базилика.</p>
-                    <a href="" class="block__price">109 грн</a>
+                    <div class="block__title">Чотири сира</div>
+                    <p class="block__text">Основа – вершковий соус альфредо. Начинка - сири дор блю, моцарелла, пармезан, чеддер</p>
+                    <a href="" class="block__price">234 грн</a>
                 </div>
             </div>
             
@@ -98,7 +110,7 @@
             </div>
         </div>
 
-        <div class="under__block">
+        <div  class="under__block">
                 <span class="under__block__text">Переглянути всі піцци</span>
                 <img class="under__block__image" src="./src/pictures/pointers/pointerRight.png">
         
@@ -106,62 +118,35 @@
     </div>
 
     <!Бургери>
-    <div class="container">
+    <div id="burgers" class="container">
         <h2>Бургери</h2>
         <div class="block__list">
             
             <div class="block">
-
+    
                 <div class="block__img">
-                    <img src="./src/pictures/burgers/tartar.jpg">
+                    <img src="./src/pictures/burgers/tomato.jpg">
                 </div>
                 <div class="block__without-img">
-                    <div class="block__title">Тар-тар</div>
-                    <p class="block__text">Пшенична булка, яловича котлета, айсберг, гриби, вершкова цибуля, сир, соус тар-тар і гірчиця.</p>
+                    <div class="block__title">Tomato burger</div>
+                    <p class="block__text">Пшенична булка, яловича котлета, айсберг, маринована цибуля, мариновані огірки, сир, томатний соус і гірчиця.</p>
                     <a href="" class="block__price">135 грн</a>
                 </div>
-
             </div>
             
             <div class="block">
 
                 <div class="block__img">
-                    <img src="./src/pictures/burgers/tartar.jpg">
+                    <img src="./src/pictures/burgers/cheesy_chicken.jpg">
                 </div>
                 <div class="block__without-img">
-                    <div class="block__title">Тар-тар</div>
-                    <p class="block__text">Пшенична булка, яловича котлета, айсберг, гриби, вершкова цибуля, сир, соус тар-тар і гірчиця.</p>
-                    <a href="" class="block__price">135 грн</a>
+                    <div class="block__title">Chicken cheese</div>
+                    <p class="block__text">Пшенична булка, айсберг, куряча котлета, мариновані огірки, сир, свіжий томат, сирний соус, томатний соус.</p>
+                    <a href="" class="block__price">131 грн</a>
                 </div>
 
             </div>
             
-            </div>
-            <div class="block__list">
-            
-                <div class="block">
-    
-                    <div class="block__img">
-                        <img src="./src/pictures/burgers/tartar.jpg">
-                    </div>
-                    <div class="block__without-img">
-                        <div class="block__title">Тар-тар</div>
-                        <p class="block__text">Пшенична булка, яловича котлета, айсберг, гриби, вершкова цибуля, сир, соус тар-тар і гірчиця.</p>
-                        <a href="" class="block__price">135 грн</a>
-                    </div>
-                </div>
-                
-                <div class="block">
-    
-                    <div class="block__img">
-                        <img src="./src/pictures/burgers/tartar.jpg">
-                    </div>
-                    <div class="block__without-img">
-                        <div class="block__title">Тар-тар</div>
-                        <p class="block__text">Пшенична булка, яловича котлета, айсберг, гриби, вершкова цибуля, сир, соус тар-тар і гірчиця.</p>
-                        <a href="" class="block__price">135 грн</a>
-                    </div>
-                </div>
             </div>
             <div class="under__block">
                 <span class="under__block__text">Переглянути всі бургери</span>
@@ -171,18 +156,18 @@
         </div>
 
     <!Піти>
-    <div class="container">
+    <div id="pita" class="container">
         <h2>Піти</h2>
         <div class="block__list">
             
             <div class="block">
 
                 <div class="block__img">
-                    <img src="./src/pictures/burgers/tartar.jpg">
+                    <img src="./src/pictures/pita/chicken.jpeg">
                 </div>
                 <div class="block__without-img">
-                    <div class="block__title">Тар-тар</div>
-                    <p class="block__text">Пшенична булка, яловича котлета, айсберг, гриби, вершкова цибуля, сир, соус тар-тар і гірчиця.</p>
+                    <div class="block__title">Піта з курячою начинкою</div>
+                    <p class="block__text">Куряче філе, майонез, помідор, салат латук, паприка, цибуля червона, гірчиця дижонська.</p>
                     <a href="" class="block__price">135 грн</a>
                 </div>
             </div>
@@ -190,11 +175,11 @@
             <div class="block">
 
                 <div class="block__img">
-                    <img src="./src/pictures/burgers/tartar.jpg">
+                    <img src="./src/pictures/pita/meat_cheese.jpeg">
                 </div>
                 <div class="block__without-img">
-                    <div class="block__title">Тар-тар</div>
-                    <p class="block__text">Пшенична булка, яловича котлета, айсберг, гриби, вершкова цибуля, сир, соус тар-тар і гірчиця.</p>
+                    <div class="block__title">Піта з м'ясом і сиром</div>
+                    <p class="block__text">м'ясо, помідор, салат листовий, сир моцарелла, цибуля ріпчаста.</p>
                     <a href="" class="block__price">135 грн</a>
                 </div>
             </div>
@@ -202,7 +187,7 @@
     </div>
 
     <!Напої>
-    <div class="container">
+    <div id="drinks" class="container">
         <h2>Напої</h2>
         <div class="block__list">
             <div class="block">
@@ -252,5 +237,6 @@
             </div>
         </div>
     </footer>
+    <script src="./index.js"></script>
     </body>
 </html>
