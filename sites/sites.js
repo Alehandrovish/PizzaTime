@@ -6,17 +6,22 @@ function addFromDB (type)
     xmlhttp.onreadystatechange = function (){   
         if(this.readyState ==4 && this.status ==200)
         {
-            let blockList = document.getElementById(type).querySelector('.block__list');
-            blockList.innerHTML = this.responseText;
+            let blockList = document.getElementById(type);
+            if (blockList){
+                blockList.querySelector('.block__list').innerHTML = this.responseText;
+            }
+           
             
         }
     };
-    xmlhttp.open('GET', './database.php?searchType=\'' + type + '\'', false);
+    xmlhttp.open('GET', './database_for_sites.php?searchType=\'' + type + '\'', false);
     xmlhttp.send();
 }
- addFromDB ('pizza');
- addFromDB ('burger');
- addFromDB ('pita');
+
+addFromDB ('pizza');
+addFromDB ('burger');
+addFromDB ('pita');
+addFromDB('drink');
 
 
  function updateCart(){
@@ -54,7 +59,7 @@ function addFromDB (type)
       ids = (JSON.stringify(ids)).slice(1, -1);
       quantitys = (JSON.stringify(quantitys)).slice(1, -1);
 
-    xmlhttp.open('GET', './DBcart.php?searchID=' + ids, false);
+    xmlhttp.open('GET', './DBcart_for_sites.php?searchID=' + ids, false);
     xmlhttp.send();
     let inputQuantitys = document.querySelectorAll('.chopbag__block__price__number__epta');
     for(let input of inputQuantitys)
@@ -79,6 +84,7 @@ function addFromDB (type)
         removeFromCart(parseInt(REMOVE[i].parentElement.id));
 })
 }
+
 
 function updateQuantity (input){
     let id = parseInt(input.closest('.chopbag__block').id);
@@ -125,71 +131,6 @@ function updateQuantity (input){
  updateCart();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const NAV_LEFT = document.querySelector('.navigation__left');
-
-if(document.querySelector('.navigation__left')){
-    NAV_LEFT.addEventListener('click', function(click){
-        let nav_item = click.target;
-        if(nav_item.textContent == 'Піци')
-        {
-            const element = document.getElementById("pizza");
-            element.scrollIntoView({behavior: "smooth", block:"start"});
-    
-            console.log(element);
-        }else if(nav_item.textContent == "Бургери")
-        {
-            const element = document.getElementById("burger");
-            element.scrollIntoView({behavior: "smooth", block:"start"});
-            console.log(element);
-        }else if(nav_item.textContent == "Піти")
-        {
-            const element = document.getElementById("pita");
-            element.scrollIntoView({behavior: "smooth", block:"start"});
-            console.log(element);
-        }else if(nav_item.textContent == "Напої")
-        {
-            const element = document.getElementById("drinks");
-            element.scrollIntoView({behavior: "smooth", block:"start"});
-            console.log(element);
-        }
-        
-    })
-}
-
-
 const ABOUT_BAR = document.querySelector('.onas');
 const WINDOW = document.querySelector('.body');
 if(document.querySelector('.onas')){
@@ -204,8 +145,6 @@ if(document.querySelector('.onas')){
         }, {once:true})
     })
 }
-
-
 const INSTA = document.getElementById("instagram");
 if(document.getElementById("instagram")){
     INSTA.addEventListener('click', function(){
@@ -216,7 +155,6 @@ if(document.getElementById("instagram")){
         location.href="https://www.facebook.com";
     })
 }
-
 
 
 const SHOPBAG_DIV = document.querySelector('.shopbag');
@@ -234,7 +172,53 @@ if(document.getElementById("shopbag")){
 
 
 
-function updatePrice(){
+
+const MAKE_ORDER = document.querySelector('.chopbag__footer__button');
+let windowe = window.location.toString();
+if(document.querySelector('.chopbag__footer__button'))
+{
+    MAKE_ORDER.addEventListener('click', function(){
+        if(parseInt(localStorage.getItem("price")) > 50)
+        location.href = "./shopbag.html";
+    })
+}
+const BLOCK_PRICE = document.querySelectorAll('.block__price');
+for(let i=0; i<BLOCK_PRICE.length; i++)
+{
+    BLOCK_PRICE[i].addEventListener('click', function(){
+        SHOPBAG.classList.add('_active');
+        addToCart(parseInt(BLOCK_PRICE[i].id));
+    })
+}
+
+function addToCart(itemId){
+    let cart = JSON.parse(localStorage.getItem('cart'));
+    let item = {
+      id:itemId,
+      quantity:1
+    };
+    if (cart.length == 0){
+      cart.push(item);
+    } else {
+      let res = cart.find(element => element.id == itemId);
+      if (res === undefined){
+          cart.push(item);
+      } else {
+          res.quantity += 1;
+      }
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCart();
+  }
+  function removeFromCart(itemId){
+      let cart = JSON.parse(localStorage.getItem('cart'));
+      cart = cart.filter(item => item.id != itemId);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      updateCart();
+      updatePrice();
+  }
+
+  function updatePrice(){
     
     const TOTALPRICE = document.getElementById('totalPrice');
     const PRICENUMBER = document.querySelectorAll('.chopbag__block__price__number');
@@ -254,81 +238,3 @@ function updatePrice(){
       }
       localStorage.setItem("price", price);
 } 
-
-const MAKE_ORDER = document.querySelector('.chopbag__footer__button');
-let windowe = window.location.toString();
-if(document.querySelector('.chopbag__footer__button'))
-{
-    MAKE_ORDER.addEventListener('click', function(){
-        if(parseInt(localStorage.getItem("price")) > 50)
-        location.href = "./sites/shopbag.html";
-    });
-}
-
-function addToCart(itemId){
-  let cart = JSON.parse(localStorage.getItem('cart'));
-  let item = {
-    id:itemId,
-    quantity:1
-  };
-  if (cart.length == 0){
-    cart.push(item);
-  } else {
-    let res = cart.find(element => element.id == itemId);
-    if (res === undefined){
-        cart.push(item);
-    } else {
-        res.quantity += 1;
-    }
-  }
-  localStorage.setItem("cart", JSON.stringify(cart));
-  updateCart();
-}
-function removeFromCart(itemId){
-    let cart = JSON.parse(localStorage.getItem('cart'));
-    cart = cart.filter(item => item.id != itemId);
-    localStorage.setItem("cart", JSON.stringify(cart));
-    updateCart();
-}
-
-
-const BLOCK_PRICE = document.querySelectorAll('.block__price');
-for(let i=0; i<BLOCK_PRICE.length; i++)
-{
-    BLOCK_PRICE[i].addEventListener('click', function(){
-        SHOPBAG.classList.add('_active');
-        addToCart(parseInt(BLOCK_PRICE[i].id));
-    })
-}
-
-
-
-
-if (document.querySelector('.under__block'))
-{const UNDER = document.querySelectorAll('.under__block');
-let under_pizza = UNDER[0];
-let under_burgs = UNDER[1];
-under_pizza.addEventListener('click', function(){
-    location.href = "./sites/pizza.html";
-})
-under_burgs.addEventListener('click', function(){
-    location.href = "./sites/burgers.html";
-})}
-
-
-const DRINK = document.querySelectorAll('.block-drink');
-for (let i = 0; i<DRINK.length; i++)
-{
-    DRINK[i].addEventListener('click', function(){
-        location.href = "./sites/drinks.html";
-    }) 
-}
-
-const BACK_BUTN = document.querySelector('.back__button');
-BACK_BUTN.addEventListener('click', function(click){
-    window.scroll({
-        top: 0, 
-        left: 0, 
-        behavior: "smooth"});
-})
-

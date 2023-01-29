@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /index.html
+Disallow: /*.php$
+Disallow: /*.css$
+Disallow: /*.js$
+Disallow: /*.ttf$
+Disallow: /*.png$
+Disallow: /*.svg$
+Disallow: /*.jpg$
+Disallow: /shopbag.html
+Sitemap: 

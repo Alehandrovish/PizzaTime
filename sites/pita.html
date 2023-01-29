@@ -12,101 +12,103 @@
         <meta name="theme-color" content="#ffffff">
 
         <link rel="stylesheet" href="../index.css" type="text/css">
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
     </head>
-    <body>
-        <body class="body">
-            <a href="../index.html" class="header">
-                <header>
-                    <a href="../index.html" class="title">PizzaTime</a>
-                    <a href="../index.html">
-                        <img class="icon" src="../src/pictures/pizzaicon.png">
-                    </a>
-                </header>
+    <body class="body">
+    
+        <header>
+            <a href="../index.html" class="header"></a>
+            <a href="../index.html" class="title">PizzaTime</a>
+            <a href="../index.html">
+                <img class="icon" src="../src/pictures/pizzaicon.png">
             </a>
-            <div class="navigation-container">
-                <nav class="navigation">
-                    <ul class="navigation__list">
-                        <div class="navigation__left">
-                            <a href ="./pizza.html" class="navigation__item">Піци</a>
-                            <a href ="./burgers.html" class="navigation__item">Бургери</a>
-                            <a href ="../index.html" class="navigation__item">Головна</a>
-                            <a href ="./drinks.html "class="navigation__item">Напої</a>
-                        </div>
-                    <div class="navigation__right">
-                        <div class="about__us">
-                            <span class="navigation__item onas" href="#">Про нас</span>
-                            <div class="about">
-                                <div class="about__block">
-                                    <a href="https://www.instagram.com">
-                                        <img class="about__img" src="../src/pictures/socialMediaIcon/instagram.png" alt="">
-                                    </a>
-                                    <a href="https://www.facebook.com/">
-                                        <img class="about__img" src="../src/pictures/socialMediaIcon/facebook.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <span class="navigation__item" href="#">Кошик</span>
-                    </div>
-                </ul>
-                </nav>
-            </div>
-            <h1>
-                Піти
-             </h1>
-             <div id="pita" class="container">
-                <div class="block__list">
-                    
-                    <div class="block">
-        
-                        <div class="block__img">
-                            <img src="../src/pictures/pita/chicken.jpeg">
-                        </div>
-                        <div class="block__without-img">
-                            <div class="block__title">Піта з курячою начинкою</div>
-                            <p class="block__text">Куряче філе, майонез, помідор, салат латук, паприка, цибуля червона, гірчиця дижонська.</p>
-                            <a href="" class="block__price">135 грн</a>
-                        </div>
-                    </div>
-                    
-                    <div class="block">
-        
-                        <div class="block__img">
-                            <img src="../src/pictures/pita/meat_cheese.jpeg">
-                        </div>
-                        <div class="block__without-img">
-                            <div class="block__title">Піта з м'ясом і сиром</div>
-                            <p class="block__text">м'ясо, помідор, салат листовий, сир моцарелла, цибуля ріпчаста.</p>
-                            <a href="" class="block__price">135 грн</a>
+        </header>
+    </a>
+    <div class="navigation-container">
+        <nav class="navigation">
+            <ul class="navigation__list">
+                <div class="navigation__left">
+                    <a href ="./pizza.html" class="navigation__item" >Піци</a>
+                    <a href ="./burgers.html " class="navigation__item" >Бургери</a>
+                    <a href ="../index.html" class="navigation__item">Головна</a>
+                    <a href ="./drinks.html "class="navigation__item" >Напої</a>
+                </div>
+            <div class="navigation__right">
+                <div class="about__us">
+                    <span class="navigation__item onas" href="#">Про нас</span>
+                    <div class="about">
+                        <div class="about__block">
+                            <img id="instagram" class="about__img" src="../src/pictures/socialMediaIcon/instagram.png" alt="">
+                                <img id="facebook" class="about__img" src="../src/pictures/socialMediaIcon/facebook.png" alt="">
                         </div>
                     </div>
                 </div>
+                <span class="navigation__item" id="shopbag">Кошик</span>
             </div>
-             <footer>
-                <div class="container">
-                    <div class="footer__top">
-                        <img class="image-footer"src="../src/pictures/pizzaicon.png">
-                        <button class="back__button">
-                            <span>Повернутися в початок</span>
-                            <img class="up__pointer" src="../src/pictures/pointers/pointerUp.png">
-                        </button>
-                    </div>
-                    <div class="footer__middle">
-                        <p>Доставка:</p>
-                        <p class="num__of__tel">Працюємо з 8:00 до 20:00</p>
-                        <p class="num__of__tel">+(xxx)xxxxxxxxx</p>
-                        <p class="num__of__tel">+(yyy)yyyyyyyyy</p>
-                    </div>
-                    <div class="footer__bottom">
-                        <span class="footer__bottom__text">
-                            2023 PizzaTime
-                        </span>
-                        <span>
-                            <a class="footer__bottom__text" href="">Політики конфіденційності і обробка персональних даних</a>
-                        </span>
-                    </div>
-                </div>
-            </footer>
-             <script src="../index.js"></script> 
-        </body>   
+        </ul>
+        </nav>
+    </div>
+    <div class="shopbag">
+        <div class="shopbag__title">
+            <h2>Ваше замовлення</h2>
+            <img  class="shopbag__title__img" src="../src/pictures/shopbag/x.png">
+        </div>
+        <div class="chopbag__body">
+            <ul id="shopList">
+                
+            </ul>
+        </div>
+        <div class="chopbag__footer">
+            <div class="chopbag__footer__order">
+                <p class="chopbag__footer__text">Сума замовлення:</p>
+                <p id="totalPrice" class="chopbag__footer__text">214 грн</p>
+            </div>
+            <div class="chopbag__footer__order">
+                <p class="chopbag__footer__text">Доставка:</p>
+                <p class="chopbag__footer__text">50 грн</p>
+            </div>
+            <div class="chopbag__footer__fullOrder">
+                <p class="chopbag__footer__text">Всього до сплати:</p>
+                <p  id="totalTotalPrice" class="chopbag__footer__text">264 грн</p>
+            </div>
+            <div class="chopbag__footer__button">Замовити
+            </div>
+        </div>
+    </div>
+    <h1>
+        Піти
+     </h1>
+     <div id="pita" class="container">
+        <div class="block__list">
+
+        </div>    
+     </div>
+      <footer>
+        <div class="container">
+            <div class="footer__top">
+                <img class="image-footer"src="../src/pictures/pizzaicon.png">
+                <button class="back__button">
+                    <span>Повернутися в початок</span>
+                    <img class="up__pointer" src="../src/pictures/pointers/pointerUp.png">
+                </button>
+            </div>
+            <div class="footer__middle">
+                <p>Доставка:</p>
+                <p class="num__of__tel">Працюємо з 8:00 до 20:00</p>
+                <p class="num__of__tel">+(xxx)xxxxxxxxx</p>
+                <p class="num__of__tel">+(yyy)yyyyyyyyy</p>
+            </div>
+            <div class="footer__bottom">
+                <span class="footer__bottom__text">
+                    2023 PizzaTime
+                </span>
+                <span>
+                    <a class="footer__bottom__text" href="">Політики конфіденційності і обробка персональних даних</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+     <script src="./sites.js"></script>
+</body>
 </html>

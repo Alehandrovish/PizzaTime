@@ -12,10 +12,13 @@
         <meta name="theme-color" content="#ffffff">
 
         <link rel="stylesheet" href="../index.css" type="text/css">
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
     </head>
 <body class="body">
-    <a href="../index.html" class="header">
+    
         <header>
+            <a href="../index.html" class="header"></a>
             <a href="../index.html" class="title">PizzaTime</a>
             <a href="../index.html">
                 <img class="icon" src="../src/pictures/pizzaicon.png">
@@ -36,222 +39,52 @@
                     <span class="navigation__item onas" href="#">Про нас</span>
                     <div class="about">
                         <div class="about__block">
-                            <a href="https://www.instagram.com">
-                                <img class="about__img" src="../src/pictures/socialMediaIcon/instagram.png" alt="">
-                            </a>
-                            <a href="https://www.facebook.com/">
-                                <img class="about__img" src="../src/pictures/socialMediaIcon/facebook.png" alt="">
-                            </a>
+                            <img id="instagram" class="about__img" src="../src/pictures/socialMediaIcon/instagram.png" alt="">
+                                <img id="facebook" class="about__img" src="../src/pictures/socialMediaIcon/facebook.png" alt="">
                         </div>
                     </div>
                 </div>
-                <span class="navigation__item" href="#">Кошик</span>
+                <span class="navigation__item" id="shopbag">Кошик</span>
             </div>
         </ul>
         </nav>
+    </div>
+    <div class="shopbag">
+        <div class="shopbag__title">
+            <h2>Ваше замовлення</h2>
+            <img  class="shopbag__title__img" src="../src/pictures/shopbag/x.png">
+        </div>
+        <div class="chopbag__body">
+            <ul id="shopList">
+                
+            </ul>
+        </div>
+        <div class="chopbag__footer">
+            <div class="chopbag__footer__order">
+                <p class="chopbag__footer__text">Сума замовлення:</p>
+                <p id="totalPrice" class="chopbag__footer__text">214 грн</p>
+            </div>
+            <div class="chopbag__footer__order">
+                <p class="chopbag__footer__text">Доставка:</p>
+                <p class="chopbag__footer__text">50 грн</p>
+            </div>
+            <div class="chopbag__footer__fullOrder">
+                <p class="chopbag__footer__text">Всього до сплати:</p>
+                <p  id="totalTotalPrice" class="chopbag__footer__text">264 грн</p>
+            </div>
+            <div class="chopbag__footer__button">Замовити
+            </div>
+        </div>
     </div>
     <h1>
         Піци
      </h1>
      <div id="pizza" class="container">
         <div class="block__list">
-            
-            <div class="block">
 
-                <div class="block__img">
-                    <img src="../src/pictures/pizza/4season.jpg">
-                </div>
-                <div class="block__without-img">
-                    <div class="block__title">Чотири сезони</div>
-                    <p class="block__text">Інгредієнти першої частини – гриби, другий – м'ясна начинка, третьої – овочі типу томатів та перцю, четвертої – оливки та каперси. Зверху додають сир.</p>
-                    <a href="" class="block__price">214 грн</a>
-                </div>
-
-            </div>
-            
-            <div class="block">
-                
-                <div class="block__img">
-                    <img src="../src/pictures/pizza/gavai.jpg">
-                </div>
-                <div class="block__without-img">
-                    <div class="block__title">Гавайська</div>
-                    <p class="block__text">В основі томатный соус. Начинка – ананаси, курка та сир моцарелла.</p>
-                    <a href="" class="block__price">195 грн</a>
-                </div>
-            
-            </div>
-        </div>
-        <div class="block__list">
-            
-            <div class="block">
-
-                <div class="block__img">
-                    <img src="../src/pictures/pizza/4season.jpg">
-                </div>
-                <div class="block__without-img">
-                    <div class="block__title">Чотири сезони</div>
-                    <p class="block__text">Інгредієнти першої частини – гриби, другий – м'ясна начинка, третьої – овочі типу томатів та перцю, четвертої – оливки та каперси. Зверху додають сир.</p>
-                    <a href="" class="block__price">214 грн</a>
-                </div>
-
-            </div>
-            
-            <div class="block">
-                
-                <div class="block__img">
-                    <img src="../src/pictures/pizza/gavai.jpg">
-                </div>
-                <div class="block__without-img">
-                    <div class="block__title">Гавайська</div>
-                    <p class="block__text">В основі томатный соус. Начинка – ананаси, курка та сир моцарелла.</p>
-                    <a href="" class="block__price">195 грн</a>
-                </div>
-            
-            </div>
-        </div>
-        <div class="block__list">
-            
-            <div class="block">
-
-                <div class="block__img">
-                    <img src="../src/pictures/pizza/4season.jpg">
-                </div>
-                <div class="block__without-img">
-                    <div class="block__title">Чотири сезони</div>
-                    <p class="block__text">Інгредієнти першої частини – гриби, другий – м'ясна начинка, третьої – овочі типу томатів та перцю, четвертої – оливки та каперси. Зверху додають сир.</p>
-                    <a href="" class="block__price">214 грн</a>
-                </div>
-
-            </div>
-            
-            <div class="block">
-                
-                <div class="block__img">
-                    <img src="../src/pictures/pizza/gavai.jpg">
-                </div>
-                <div class="block__without-img">
-                    <div class="block__title">Гавайська</div>
-                    <p class="block__text">В основі томатный соус. Начинка – ананаси, курка та сир моцарелла.</p>
-                    <a href="" class="block__price">195 грн</a>
-                </div>
-            
-            </div>
-        </div>
-        <div class="block__list">
-            
-            <div class="block">
-
-                <div class="block__img">
-                    <img src="../src/pictures/pizza/4season.jpg">
-                </div>
-                <div class="block__without-img">
-                    <div class="block__title">Чотири сезони</div>
-                    <p class="block__text">Інгредієнти першої частини – гриби, другий – м'ясна начинка, третьої – овочі типу томатів та перцю, четвертої – оливки та каперси. Зверху додають сир.</p>
-                    <a href="" class="block__price">214 грн</a>
-                </div>
-
-            </div>
-            
-            <div class="block">
-                
-                <div class="block__img">
-                    <img src="../src/pictures/pizza/gavai.jpg">
-                </div>
-                <div class="block__without-img">
-                    <div class="block__title">Гавайська</div>
-                    <p class="block__text">В основі томатный соус. Начинка – ананаси, курка та сир моцарелла.</p>
-                    <a href="" class="block__price">195 грн</a>
-                </div>
-            
-            </div>
-        </div>
-        <div class="block__list">
-            
-            <div class="block">
-
-                <div class="block__img">
-                    <img src="../src/pictures/pizza/4season.jpg">
-                </div>
-                <div class="block__without-img">
-                    <div class="block__title">Чотири сезони</div>
-                    <p class="block__text">Інгредієнти першої частини – гриби, другий – м'ясна начинка, третьої – овочі типу томатів та перцю, четвертої – оливки та каперси. Зверху додають сир.</p>
-                    <a href="" class="block__price">214 грн</a>
-                </div>
-
-            </div>
-            
-            <div class="block">
-                
-                <div class="block__img">
-                    <img src="../src/pictures/pizza/gavai.jpg">
-                </div>
-                <div class="block__without-img">
-                    <div class="block__title">Гавайська</div>
-                    <p class="block__text">В основі томатный соус. Начинка – ананаси, курка та сир моцарелла.</p>
-                    <a href="" class="block__price">195 грн</a>
-                </div>
-            
-            </div>
-        </div>
-        <div class="block__list">
-            
-            <div class="block">
-
-                <div class="block__img">
-                    <img src="../src/pictures/pizza/4season.jpg">
-                </div>
-                <div class="block__without-img">
-                    <div class="block__title">Чотири сезони</div>
-                    <p class="block__text">Інгредієнти першої частини – гриби, другий – м'ясна начинка, третьої – овочі типу томатів та перцю, четвертої – оливки та каперси. Зверху додають сир.</p>
-                    <a href="" class="block__price">214 грн</a>
-                </div>
-
-            </div>
-            
-            <div class="block">
-                
-                <div class="block__img">
-                    <img src="../src/pictures/pizza/gavai.jpg">
-                </div>
-                <div class="block__without-img">
-                    <div class="block__title">Гавайська</div>
-                    <p class="block__text">В основі томатный соус. Начинка – ананаси, курка та сир моцарелла.</p>
-                    <a href="" class="block__price">195 грн</a>
-                </div>
-            
-            </div>
-        </div>
-        <div class="block__list">
-            
-            <div class="block">
-
-                <div class="block__img">
-                    <img src="../src/pictures/pizza/4season.jpg">
-                </div>
-                <div class="block__without-img">
-                    <div class="block__title">Чотири сезони</div>
-                    <p class="block__text">Інгредієнти першої частини – гриби, другий – м'ясна начинка, третьої – овочі типу томатів та перцю, четвертої – оливки та каперси. Зверху додають сир.</p>
-                    <a href="" class="block__price">214 грн</a>
-                </div>
-
-            </div>
-            
-            <div class="block">
-                
-                <div class="block__img">
-                    <img src="../src/pictures/pizza/gavai.jpg">
-                </div>
-                <div class="block__without-img">
-                    <div class="block__title">Гавайська</div>
-                    <p class="block__text">В основі томатный соус. Начинка – ананаси, курка та сир моцарелла.</p>
-                    <a href="" class="block__price">195 грн</a>
-                </div>
-            
-            </div>
-        </div>
+        </div>    
      </div>
-     <footer>
+      <footer>
         <div class="container">
             <div class="footer__top">
                 <img class="image-footer"src="../src/pictures/pizzaicon.png">
@@ -276,6 +109,6 @@
             </div>
         </div>
     </footer>
-     <script src="../index.js"></script>
+     <script src="./sites.js"></script>
 </body>
 </html>

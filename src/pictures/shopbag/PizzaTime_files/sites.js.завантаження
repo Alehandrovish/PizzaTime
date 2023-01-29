@@ -1,0 +1,150 @@
+const NAV_LEFT = document.querySelector('.navigation__left');
+
+if(document.querySelector('.navigation__left')){
+    NAV_LEFT.addEventListener('click', function(click){
+        let nav_item = click.target;
+        if(nav_item.textContent == 'Піци')
+        {
+            const element = document.getElementById("pizza");
+            element.scrollIntoView({behavior: "smooth", block:"start"});
+    
+            console.log(element);
+        }else if(nav_item.textContent == "Бургери")
+        {
+            const element = document.getElementById("burgers");
+            element.scrollIntoView({behavior: "smooth", block:"start"});
+            console.log(element);
+        }else if(nav_item.textContent == "Піти")
+        {
+            const element = document.getElementById("pita");
+            element.scrollIntoView({behavior: "smooth", block:"start"});
+            console.log(element);
+        }else if(nav_item.textContent == "Напої")
+        {
+            const element = document.getElementById("drinks");
+            element.scrollIntoView({behavior: "smooth", block:"start"});
+            console.log(element);
+        }
+        
+    })
+}
+
+const ABOUT_BAR = document.querySelector('.onas');
+const WINDOW = document.querySelector('.body');
+if(document.querySelector('.onas')){
+    ABOUT_BAR.addEventListener('click', function(e){
+        e.stopPropagation();
+        element = document.querySelector('.about');
+        element.classList.toggle('_active');
+    
+        WINDOW.addEventListener('click', function(event){
+            let everyWhere = event.target;
+            element.classList.remove('_active');
+        }, {once:true})
+    })
+}
+const INSTA = document.getElementById("instagram");
+if(document.getElementById("instagram")){
+    INSTA.addEventListener('click', function(){
+        location.href="https://www.instagram.com";
+    })
+    const FACEBOOK = document.getElementById("facebook")
+    FACEBOOK.addEventListener('click', function(){
+        location.href="https://www.facebook.com";
+    })
+}
+
+
+const SHOPBAG = document.getElementById("shopbag");
+const SHOPBAG_DIV = document.querySelector('.shopbag');
+const SHOPBAG_EXIT = document.querySelector('.shopbag__title__img');
+if(document.getElementById("shopbag")){
+    SHOPBAG.addEventListener('click', function(){
+        SHOPBAG_DIV.classList.add('_active');
+        updatePrice();
+    
+    SHOPBAG_EXIT.addEventListener('click', function(){
+        SHOPBAG_DIV.classList.remove('_active');
+    })
+})}
+
+
+const MINUS = document.querySelectorAll('.minus')
+const PLUS = document.querySelectorAll('.plus');
+const number = document.querySelectorAll('.chopbag__block__price__number__epta');
+for (let i=0; i<MINUS.length; i++)
+{
+    MINUS[i].addEventListener('click', function(){
+        if (parseInt(number[i].textContent) > 1)
+        {
+            number[i].textContent=parseInt(number[i].textContent)-1;
+        }
+        updatePrice();
+    })
+    PLUS[i].addEventListener('click', function(){
+        if (parseInt(number[i].textContent) < 10)
+    {
+        number[i].textContent=parseInt(number[i].textContent)+1;
+        updatePrice();
+    }
+    })
+}
+
+function updatePrice(){
+    const TOTALPRICE = document.getElementById('totalPrice');
+    const PRICENUMBER = document.querySelectorAll('.chopbag__block__price__number');
+    const TOTALTOTALPRICE = document.getElementById('totalTotalPrice');
+    let value = 0;
+
+    for(const price of PRICENUMBER){
+        value +=parseInt(price.closest('.chopbag__block__price').querySelector('.chopbag__block__price__number__epta').textContent)*parseInt(price.textContent.slice(0, 4));
+        
+    }
+    TOTALPRICE.textContent = value +" грн";
+    TOTALTOTALPRICE.textContent = (parseInt(value)+50) +" грн";
+} 
+const MAKE_ORDER = document.querySelector('.chopbag__footer__button');
+let windowe = window.location.toString();
+if(document.querySelector('.chopbag__footer__button'))
+{
+    MAKE_ORDER.addEventListener('click', function(){
+        location.href = "./shopbag.html";
+    })
+}
+const BLOCK_PRICE = document.querySelectorAll('.block__price');
+for(let i=0; i<BLOCK_PRICE.length; i++)
+{
+    BLOCK_PRICE[i].addEventListener('click', function(){
+        SHOPBAG.classList.add('_active');
+    })
+}
+const BACK_BUTN = document.querySelector('.back__button');
+BACK_BUTN.addEventListener('click', function(click){
+    window.scroll({
+        top: 0, 
+        left: 0, 
+        behavior: "smooth"});
+})
+
+const DELIVERY = document.getElementsByName('delivery');
+const DELIVERY_TO_HOME_BLOCK = document.querySelector('.delivery-to-home');
+const DELIVERY_YOURSELF_BLOCK = document.querySelector('.take-yourself');
+
+for (let i=0; i<DELIVERY.length; i++)
+{
+    DELIVERY[i].addEventListener('change', radioBTN);
+}
+
+function radioBTN()
+{
+    if (DELIVERY[0].checked == true){
+        DELIVERY_TO_HOME_BLOCK.classList.toggle('_active');
+        DELIVERY_YOURSELF_BLOCK.classList.toggle('_active');
+    }
+    if (DELIVERY[0].checked == false)
+    {
+        DELIVERY_TO_HOME_BLOCK.classList.add('_active');
+        DELIVERY_YOURSELF_BLOCK.classList.add('_active');
+    }
+    
+}

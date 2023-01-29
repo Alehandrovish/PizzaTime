@@ -228,7 +228,6 @@ ul, li{
     width: 20px;
     height: 20px;
     right: 50px;
-    cursor: pointer;
 }
 .chopbag__block__with__img{
     width: auto;
@@ -271,7 +270,6 @@ ul, li{
     width: 20px;
     height: 20px;
     align-self:center;
-    cursor: pointer;
 }
 .chopbag__block__price__container{
     background-color: #F4D19C;
@@ -309,21 +307,13 @@ ul, li{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 60px;
+    padding: 10px;
+    cursor: pointer;
     background-color: #F4D19C;
     border-radius: 59px;
-    margin-top: 20px;
-    font: inherit;
-    border: 2px solid black;
-    cursor: pointer;
-    box-shadow: 0 5px 0 rgb(158, 0, 0);
-    position: relative;
-    top:0;
+    width: auto;
 }
-.chopbag__footer__button:active{
-    top:5px;
-    box-shadow: 0 0 0;
-}
+
 .chopbag__footer__button span{
     font-weight: bold;
 }
@@ -383,15 +373,6 @@ transition-duration: 0.4s;
     text-decoration: none;
     color: #000;
     cursor: pointer;
-    border: 2px solid black;
-    cursor: pointer;
-    box-shadow: 0 5px 0 rgb(158, 0, 0);
-    position: relative;
-    top:0;
-}
-.block__price:active{
-    top:5px;
-    box-shadow: 0 0 0;
 }
 .block-drink{
     display: flex;
@@ -523,56 +504,25 @@ img.image-footer{
     border: 0px solid;
     width: calc(100% - 40px);
     font: inherit;
-}
-.contacts__input._error{
-    box-shadow: 0 0 15px rgb(158, 0, 0);
+
 }
 .delivery__choise{
     display: flex;
     flex-direction: column;
-}
-.delivery__choise__toHouse{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 15px;
 }
 .delivery__choise__type{
     padding: 10px 0;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    line-height: 1.5;
+}
+input[type="radio"]{
     font: inherit;
-    gap: 15px;
-}
-.delivery__choise__toHouse__radio{
-display: none;
-}
-.delivery__choise__toHouse__fake{
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 3px  solid black;
-    border-radius: 59px;
-    position: relative;
-}
-.delivery__choise__toHouse__fake::before{
-    content: "";
-    transition: 0.2s ease-in;
-    position: absolute;
-    display: block;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 15px;
-    height: 15px;
-    background-color: rgb(158, 0, 0);
-    border-radius: 59px;
-    opacity: 0;
-}
-.delivery__choise__toHouse__radio:checked + .delivery__choise__toHouse__fake::before{
-    opacity: 1;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 50%;
 }
 .delivery-to-home{
     display: flex;
@@ -602,9 +552,6 @@ display: none;
     width: 60%;
     font: inherit;
 }
-.adress__data._error{
-    box-shadow: 0 0 30px rgb(158, 0, 0);
-}
 .take-yourself{
     display: none;
     flex-direction: column;
@@ -619,9 +566,6 @@ display: none;
     width: 100%;
     font: inherit;
 }
-.choose_district._error{
-    box-shadow: 0 0 15px rgb(158, 0, 0);
-}
 .comments__textarea{
     max-width: calc(100% - 4px);
     min-width: calc(100% - 4px);
@@ -633,27 +577,17 @@ display: none;
 
 }
 .button__make-order{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 60px;
+    margin-top: 50px;
     background-color: #F4D19C;
     border-radius: 59px;
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
     padding: 20px;
-    font: inherit;
-    border: 2px solid black;
-    cursor: pointer;
-    box-shadow: 0 5px 0 rgb(158, 0, 0);
-    position: relative;
-    top:0;
 }
-.button__make-order:active{
-    top:5px;
-    box-shadow: 0 0 0;
+.button__make-order span{
+    font-weight: bold;
 }
-
 
 
 @media (max-width:1309px){
@@ -694,13 +628,6 @@ display: none;
     }
     .block__price {
         font-size: 30px;
-        box-shadow: 0 5px 0 rgb(158, 0, 0);
-        position: relative;
-        top:0;
-    }
-    .block__price:active{
-        top:5px;
-        box-shadow: 0 0 0;
     }
     .under__block{
         height: auto;

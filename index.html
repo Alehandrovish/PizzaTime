@@ -10,6 +10,7 @@
         <link rel="mask-icon" href="src/icons/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
+        <meta charset="UTF-8">
 
         <link rel="stylesheet" href="index.css" type="text/css">
     </head>
@@ -35,79 +36,50 @@
                     <div class="about">
                         <div class="about__block">
                             <div class="about__img__block">
-                            <a href="https://www.instagram.com">
-                                <img class="about__img" src="./src/pictures/socialMediaIcon/instagram.png" alt="">
-                            </a>
-                            <a href="https://www.facebook.com/">
-                                <img class="about__img" src="./src/pictures/socialMediaIcon/facebook.png" alt="">
-                            </a>
+                                <img id="instagram" class="about__img" src="./src/pictures/socialMediaIcon/instagram.png" alt="">
+                                <img id="facebook" class="about__img" src="./src/pictures/socialMediaIcon/facebook.png" alt="">
                         </div>
                         </div>
                     </div>
                 </div>
-                <span class="navigation__item" href="#">Кошик</span>
+                <span id="shopbag" class="navigation__item ">Кошик</span>
             </div>
         </ul>
         </nav>
         
+    </div>
+    <div class="shopbag">
+        <div class="shopbag__title">
+            <h2>Ваше замовлення</h2>
+            <img  class="shopbag__title__img" src="./src/pictures/shopbag/x.png">
+        </div>
+        <div class="chopbag__body">
+            <ul id="shopList">
+                
+            </ul>
+        </div>
+        <div class="chopbag__footer">
+            <div class="chopbag__footer__order">
+                <p class="chopbag__footer__text">Сума замовлення:</p>
+                <p id="totalPrice" class="chopbag__footer__text">214 грн</p>
+            </div>
+            <div class="chopbag__footer__order">
+                <p class="chopbag__footer__text">Доставка:</p>
+                <p class="chopbag__footer__text">50 грн</p>
+            </div>
+            <div class="chopbag__footer__fullOrder">
+                <p class="chopbag__footer__text">Всього до сплати:</p>
+                <p  id="totalTotalPrice" class="chopbag__footer__text">264 грн</p>
+            </div>
+            <div class="chopbag__footer__button">Замовити
+            </div>
+        </div>
     </div>
     <!Піци>
     <div id="pizza" class="container">
         <h2>Піци</h2>
         <div class="block__list">
             
-            <div class="block">
-
-                <div class="block__img">
-                    <img src="./src/pictures/pizza/4season.jpg">
-                </div>
-                <div class="block__without-img">
-                    <div class="block__title">Чотири сезони</div>
-                    <p class="block__text">Інгредієнти першої частини – гриби, другий – м'ясна начинка, третьої – овочі типу томатів та перцю, четвертої – оливки та каперси. Зверху додають сир.</p>
-                    <a href="" class="block__price">214 грн</a>
-                </div>
-
-            </div>
-            
-            <div class="block">
-                
-                <div class="block__img">
-                    <img src="./src/pictures/pizza/gavai.jpg">
-                </div>
-                <div class="block__without-img">
-                    <div class="block__title">Гавайська</div>
-                    <p class="block__text">В основі томатный соус. Начинка – ананаси, курка та сир моцарелла.</p>
-                    <a href="" class="block__price">195 грн</a>
-                </div>
-            
-            </div>
-        </div>
-        
-        <div class="block__list">
-            
-            <div class="block">
-
-                <div class="block__img">
-                    <img src="./src/pictures/pizza/four_sheese.jpg">
-                </div>
-                <div class="block__without-img">
-                    <div class="block__title">Чотири сира</div>
-                    <p class="block__text">Основа – вершковий соус альфредо. Начинка - сири дор блю, моцарелла, пармезан, чеддер</p>
-                    <a href="" class="block__price">234 грн</a>
-                </div>
-            </div>
-            
-            <div class="block">
-                <div class="block__img">
-                    <img src="./src/pictures/pizza/margarita.jpg">
-                </div>
-                <div class="block__without-img">
-                    <div class="block__title">Маргарита</div>
-                    <p class="block__text">Начинка – томаты и сыр. Обычно томаты нарезаны кружочками, сверху всё обильно присыпается зеленью типа орегано или базилика.</p>
-                    <a href="" class="block__price">109 грн</a>
-                </div>
-            
-            </div>
         </div>
 
         <div  class="under__block">
@@ -118,34 +90,9 @@
     </div>
 
     <!Бургери>
-    <div id="burgers" class="container">
+    <div id="burger" class="container">
         <h2>Бургери</h2>
         <div class="block__list">
-            
-            <div class="block">
-    
-                <div class="block__img">
-                    <img src="./src/pictures/burgers/tomato.jpg">
-                </div>
-                <div class="block__without-img">
-                    <div class="block__title">Tomato burger</div>
-                    <p class="block__text">Пшенична булка, яловича котлета, айсберг, маринована цибуля, мариновані огірки, сир, томатний соус і гірчиця.</p>
-                    <a href="" class="block__price">135 грн</a>
-                </div>
-            </div>
-            
-            <div class="block">
-
-                <div class="block__img">
-                    <img src="./src/pictures/burgers/cheesy_chicken.jpg">
-                </div>
-                <div class="block__without-img">
-                    <div class="block__title">Chicken cheese</div>
-                    <p class="block__text">Пшенична булка, айсберг, куряча котлета, мариновані огірки, сир, свіжий томат, сирний соус, томатний соус.</p>
-                    <a href="" class="block__price">131 грн</a>
-                </div>
-
-            </div>
             
             </div>
             <div class="under__block">
@@ -160,29 +107,6 @@
         <h2>Піти</h2>
         <div class="block__list">
             
-            <div class="block">
-
-                <div class="block__img">
-                    <img src="./src/pictures/pita/chicken.jpeg">
-                </div>
-                <div class="block__without-img">
-                    <div class="block__title">Піта з курячою начинкою</div>
-                    <p class="block__text">Куряче філе, майонез, помідор, салат латук, паприка, цибуля червона, гірчиця дижонська.</p>
-                    <a href="" class="block__price">135 грн</a>
-                </div>
-            </div>
-            
-            <div class="block">
-
-                <div class="block__img">
-                    <img src="./src/pictures/pita/meat_cheese.jpeg">
-                </div>
-                <div class="block__without-img">
-                    <div class="block__title">Піта з м'ясом і сиром</div>
-                    <p class="block__text">м'ясо, помідор, салат листовий, сир моцарелла, цибуля ріпчаста.</p>
-                    <a href="" class="block__price">135 грн</a>
-                </div>
-            </div>
         </div>
     </div>
 
@@ -191,29 +115,23 @@
         <h2>Напої</h2>
         <div class="block__list">
             <div class="block">
-                <a href="./sites/drinks.html" class="block-drink">
-                    <div>
+                    <div id="tea" class="block-drink">
                         <img src="./src/pictures/drinkable/tea.jpg" class="block-drink__img">
                         <div class="block-drink__text">Чай</div>
                     </div>
-                </a>
             </div>
             <div class="block">
-                <a href="./sites/drinks.html" class="block-drink">
-                    <div>
+                    <div id="coffee" class="block-drink">
                         <img src="./src/pictures/drinkable/coffee.png" class="block-drink__img">
                         <div class="block-drink__text">Кава</div>
                     </div>
-                </a>
             </div>
             <div class="block">
-                <a href="./sites/drinks.html" class="block-drink">
-                    <div>
-                        <img src="./src/pictures/drinkable/sparkling water.png" class="block-drink__img">
+                <div id="water" class="block-drink">
+                    <img src="./src/pictures/drinkable/sparkling water.png" class="block-drink__img">
                         <div class="block-drink__text">Газовані напої</div>
-                    </div>
-                </a>
-            </div>
+                </div>
+        </div>
            
         </div>
     </div>
